@@ -135,7 +135,7 @@ let ClearCart=()=>{
 
 };
 let checkout=function(){
-    window.location.href = "/src/checkout.html";
+    window.location.href = "checkout.html";
 
 }
 

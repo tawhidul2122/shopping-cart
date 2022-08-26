@@ -63,11 +63,23 @@ body{
 **/
 .shop{
     display: grid;
-    grid-template-columns: repeat(5,220px);
+    grid-template-columns: repeat(4,220px);
     gap: 30px;
     justify-content: center;
     
 
+}
+@media(max-width:1000px){
+    .shop{
+        grid-template-columns: repeat(2,220px);
+
+    }
+}
+@media (max-width:500px) {
+    .shop{
+        grid-template-columns: repeat(1,220px);
+    }
+    
 }
 
 .item{
@@ -86,6 +98,7 @@ body{
     flex-direction: row; 
     /* default property */
     justify-content: space-between;
+    align-items: center;
 
 }
 .buttons{

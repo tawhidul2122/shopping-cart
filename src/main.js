@@ -49,7 +49,7 @@ let increment=(id)=>{
    // console.log(basket);
    localStorage.setItem("data",JSON.stringify(basket));
 
-    }
+    };
 
 let decrement=(id)=>{
     let item=id;

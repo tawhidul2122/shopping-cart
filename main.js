@@ -34,7 +34,7 @@ let shopItemsData=[
 
     
 ];
-let basket
+let basket=[];
 
 let generateshop=()=> {
     return (shop.innerHTML=shopItemsData.map((x)=>{
@@ -67,11 +67,41 @@ generateshop();
 
 let increment=(id)=>{
     let item=id;
+    let search=basket.find((x)=>x.id===item.id);
+    if(search === undefined){
+        basket.push({
+            id:item.id,
+            item:1,
+        });
+    }
+    else {
+        search.item+=1;
+    }
+    update(item.id);
+   // console.log(basket);
 
-    console.log(item.id);
-};
+    }
+
 let decrement=(id)=>{
     let item=id;
-    console.log(item.id);
+    let search=basket.find((x)=>x.id===item.id);
+    if(search.item == 0) return;
+    else {
+        search.item-=1;
+    }
+    update(item.id);
+   // console.log(basket);
+    
 }; 
-let update =()=>{};
+let update =(id)=>{
+    let search=basket.find((x)=>x.id===id);
+    console.log(search.item);
+    document.getElementById(id).innerHTML=search.item;
+    calcuation();
+};
+
+let calcuation =()=>{
+    let cartIcon=document.getElementById("cartAmount");
+    cartIcon.innerHTML=(basket.map((x)=>x.item).reduce((x,y)=>x+y,0));
+
+};

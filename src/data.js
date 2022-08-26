@@ -1,3 +1,4 @@
+//all objects are here
 let shopItemsData=
 [
     {

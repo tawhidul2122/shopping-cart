@@ -9,6 +9,13 @@ body{
     position absloute; */
     /* position: relative; */
 }
+i{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
 
 /**
 * ! changing the padding of div from top left postition

@@ -153,7 +153,7 @@ let totalAmount=()=>{
 
         
 
-        <button onclick="checkout()" class="checkout">Checkout</button>
+        <button class="checkout">Checkout</button>
         <button onclick="ClearCart()"  class="removeAll">ClearCart</button>
         `;
         
